@@ -1,0 +1,18 @@
+[package]
+name = "confluence-publisher"
+version = "0.1.0"
+authors = ["Sebastian Kaiser <sk4is3r@gmail.com>"]
+edition = "2018"
+homepage = "https://github.com/mttrbit/confluence-publisher-rs"
+repository = "https://github.com/mttrbit/confluence-publisher-rs.git"
+description = "A Rust libary for publishing content to Confluence."
+keywords = ["confluence", "api"]
+readme = "README.md"
+license = "ISC"
+
+[dependencies]
+confluence = { git = "https://github.com/mttrbit/confluence-rs", branch = "main"}
+reqwest = "0.10.8"
+serde_yaml = "0.8.13"
+serde_json = "1.0.59"
+serde = { version = "1.0", features = ["derive"] }
