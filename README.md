@@ -22,6 +22,11 @@ extern crate confluence_publisher;
 
 // As the confluence client does not support basic auth or api tokens yet you may need to
 // make sure that you stored a valid session cookie in your client's session store.
+let client = reqwest::blocking::Client::builder()
+    .cookie_store(true)
+    .build()
+    .unwrap();
+let rc_client = std::rc::Rc::new(client);
 
 let publisher = Publisher::new(Confluence::with_client(
     rc_client,
