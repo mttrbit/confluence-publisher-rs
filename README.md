@@ -20,11 +20,12 @@ Vip is built with Rust 1.48.
 extern crate confluence;
 extern crate confluence_publisher;
 
-// make sure, you stored a valid session cookie in your client's session store.
+// As the confluence client does not support basic auth or api tokens yet you may need to
+// make sure that you stored a valid session cookie in your client's session store.
 
 let publisher = Publisher::new(Confluence::with_client(
     rc_client,
-    "https://path.to.your.confleunce.com/rest/api",
+    "https://path.to.your.confluence.com/rest/api",
 ));
 
 // path := absolute path to your metadata file (yml)
