@@ -6,7 +6,9 @@ use {
         model::*,
     },
     reqwest::{
-        blocking::multipart::Form, blocking::multipart::Part, header::HeaderMap, StatusCode,
+        blocking::multipart::{Form, Part},
+        header::HeaderMap,
+        StatusCode,
     },
     std::{
         fs::File,

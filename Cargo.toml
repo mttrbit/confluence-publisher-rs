@@ -12,7 +12,7 @@ license = "ISC"
 
 [dependencies]
 confluence = { git = "https://github.com/mttrbit/confluence-rs", branch = "main"}
-reqwest = "0.10.8"
+reqwest = { version = "0.11", features = ["stream", "json", "blocking", "cookies", "multipart"] }
 serde_yaml = "0.8.13"
 serde_json = "1.0.59"
 serde = { version = "1.0", features = ["derive"] }
